@@ -1,0 +1,1097 @@
+body {
+  font-size: 16px;
+}
+
+.header {
+  padding-left: 47px;
+  padding-right: 47px;
+  border-bottom: 1px solid #eef1f1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  z-index: 1000;
+  background-color: white;
+}
+.headerContainer {
+  height: 80px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+}
+.logo {
+  cursor: pointer;
+}
+.sliders {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+  transition: fill 0.3s ease;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.sliderTitle {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.sliderTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: blue;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.sliderTitle.active::after {
+  width: 100%;
+  left: 0;
+}
+.optionsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+#search:hover svg path {
+  fill: blue;
+  transition: fill 0.3s ease;
+}
+#subscribeContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+#subscribeContainer a div,
+#subscribeContainer a svg path {
+  color: blue;
+}
+#subscribeContainer:hover,
+#subscribeContainer:hover * {
+  color: cyan;
+}
+#languageSelectorContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  gap: 10px;
+  width: 6rem;
+  z-index: 1001;
+  /* position: absolute; */
+  /* margin-top: 5rem; */
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.dropdownMenu {
+  font-weight: bold;
+}
+.dropdownMenuLink:hover {
+  color: blue;
+  transition: color 0.3s ease;
+}
+.loremIpsum {
+  margin-top: 10rem;
+}
+.productsDropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.productsDropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+.offersDropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.offersDropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+.conceptSpaceDropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.conceptSpaceDropdown.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.secondHeader {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 300px;
+  top: 80px;
+  padding-left: 47px;
+  padding-right: 47px;
+  background-color: white;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 999;
+}
+.secondHeader.show {
+  opacity: 1;
+  visibility: visible;
+}
+.secondHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1110px;
+}
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 10rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.secondHeaderLink {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: blue;
+}
+.secondHeaderLink:hover {
+  color: cyan;
+  transition: color 0.5s ease;
+}
+
+.global {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  padding-left: 47px;
+  padding-right: 47px;
+  /* width: 100%; */
+  height: auto;
+}
+.global p {
+  font-size: 16px;
+  line-height: 1.33;
+}
+.globalContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.pageName {
+  font-size: 15px;
+}
+
+.poster {
+  height: 376px;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 360px;
+  width: auto;
+}
+
+.posterBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://static.tbcconcept.ge/desktop/media/ze324k50.yq4Become-2.webp");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+@media (max-width: 1023px) {
+  .posterBackground {
+    background-image: url("https://static.tbcconcept.ge/tablet/media/ze324k50.yq4Become-2.webp");
+  }
+}
+@media (max-width: 767px) {
+  .posterBackground {
+    background-image: url("https://static.tbcconcept.ge/mobile/media/ze324k50.yq4Become-2.webp");
+  }
+}
+.posterTextContainer {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.posterTextContainer {
+  margin-left: 80px;
+  width: 540px;
+}
+.posterTitle {
+  font-weight: bold;
+}
+.posterLink {
+  height: 50px;
+  width: 151px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.posterLink::before,
+.posterLink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease;
+}
+.posterLink::before {
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  opacity: 1;
+}
+.posterLink::after {
+  background-color: #3295ce;
+  opacity: 0;
+}
+.posterLink:hover::before {
+  opacity: 0;
+}
+
+.posterLink:hover::after {
+  opacity: 1;
+}
+.posterLink > * {
+  position: relative;
+  z-index: 1;
+}
+.posterLink a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.posterLinkContainer {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.noteParagraph {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  /* text-align: center; */
+}
+@media screen and (min-width: 1440px) {
+  .noteParagraph {
+    font-size: 36px;
+  }
+}
+
+/* packs */
+.packs {
+  /* padding: 20px; */
+  /* max-height: 542px; */
+}
+
+.packsTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.packsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.pack {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.packImageWrapper {
+  height: 200px;
+}
+
+.packImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.packTextContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.packTitle {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.arrow-link {
+  display: flex;
+  align-items: center;
+}
+.arrow-link div svg path {
+  transition: fill 0.2s ease;
+}
+.arrow-link a {
+  transition: color 0.2s ease;
+}
+.arrow-link:hover div svg path {
+  fill: gray;
+}
+.arrow-link:hover a {
+  color: gray;
+}
+
+.button_icon {
+  margin-right: 10px;
+}
+
+.button_text {
+  color: #fff;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.button_text:hover {
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .packsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .packImageWrapper {
+    height: 150px;
+  }
+}
+
+.packsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.pack {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Make the 360 pack span two rows */
+.pack:nth-child(2) {
+  grid-row: span 2;
+}
+
+.packImageWrapper {
+  height: 100%;
+  min-height: 200px;
+}
+
+.packImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pack:hover img {
+  transform: scale(1.1);
+}
+
+/* Adjust the media query for responsiveness */
+@media screen and (max-width: 1024px) {
+  .packsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .pack:nth-child(2) {
+    grid-row: auto;
+  }
+}
+
+.packLink {
+  color: white;
+}
+
+.darkened-image {
+  filter: brightness(75%);
+}
+
+.achievementsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5rem;
+}
+
+.achievement {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.achievement {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 15rem;
+}
+.achievementNumber {
+  font-size: 50px;
+  font-weight: bold;
+}
+.achievementName {
+  font-weight: 200;
+  color: grey;
+  font-size: 20px;
+}
+
+/* offers */
+
+.offersSection {
+  margin-top: 50px;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offersSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.offersSectionHeader h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.offersSlider {
+  overflow: hidden;
+  position: relative;
+}
+
+.offersSliderContent {
+  display: flex;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.offersSliderContent2 {
+  display: flex;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.offersSliderContent3 {
+  display: flex;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.offerCard {
+  flex: 0 0 calc(33.333% - 20px);
+  margin-right: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.offerCard .mainImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mainImage {
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: translateY(-10px);
+}
+
+.offerCard .offerIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.offerInfo {
+  padding: 15px;
+  position: relative;
+  bottom: 30px;
+  background: white;
+  height: 150px;
+}
+
+.offerType {
+  font-size: 12px;
+  color: #666;
+}
+
+.offerInfo h3 {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.offerCard p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.sliderControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sliderProgress {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.sliderProgress2 {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  height: 100%;
+  background-color: blue;
+  width: 33.333%;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.progressBar2 {
+  position: absolute;
+  height: 100%;
+  background-color: blue;
+  width: 33.333%;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.sliderArrows {
+  display: flex;
+  gap: 10px;
+}
+
+.sliderArrows button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.sliderArrows button:hover {
+  background-color: #e0e0e0;
+}
+
+.mobileBankAdvertisementContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.leftAdvertisement {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.advertisementTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.advertisementDescription {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: grey;
+}
+
+.advertisementLinksContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.advertisementLinksContainer a {
+  display: inline-block;
+  width: 135px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advertisementLinksContainer a:first-child {
+  background-image: url("path-to-google-play-badge.png");
+}
+
+.advertisementLinksContainer a:last-child {
+  background-image: url("path-to-app-store-badge.png");
+}
+
+.advertisementImageContainer {
+  max-width: 40%;
+}
+
+.advertisementImage {
+  max-height: 414px;
+  max-width: auto;
+}
+
+.mainPrizeImage {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.prizeInfo {
+  padding: 15px;
+  background: white;
+  height: 150px;
+}
+
+.poster2Background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://static.tbcconcept.ge/desktop/media/nvmgsymp.3xqprivate banker.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+@media (max-width: 1023px) {
+  .poster2Background {
+    background-image: url("https://static.tbcconcept.ge/tablet/media/nvmgsymp.3xqprivate banker.png");
+  }
+}
+@media (max-width: 767px) {
+  .poster2Background {
+    background-image: url("https://static.tbcconcept.ge/mobile/media/nvmgsymp.3xqprivate banker.png");
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerColumn {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.footerLogo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footerColumn h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footerColumn ul li a:hover {
+  color: #6200ee;
+}
+
+.footerSocial a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footerSocial img {
+  width: 24px;
+  height: 24px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerBottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footerLinks a:hover {
+  color: #6200ee;
+}
+
+/********************/
+/********************/
+/*  CONTACT BUTTON  */
+/********************/
+/********************/
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: opacity 150ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-button-wrapper {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+}
+
+.more-button {
+  background: #424a4d;
+}
+
+.more-button:hover,
+.more-button:active {
+  opacity: 85%;
+}
+
+.more-button svg {
+  stroke: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.svgHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms;
+  position: absolute;
+  pointer-events: none;
+}
+
+.svgShow {
+  opacity: 1;
+  visibility: visible;
+  transition: all 500ms;
+  pointer-events: all;
+}
+
+.contact-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 500ms;
+  position: absolute;
+  bottom: 100%;
+  translate: 0 -14px;
+}
+
+.contact-button-wrapper.contactHidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms;
+  position: absolute;
+  pointer-events: none;
+}
+
+.contact-button {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.163);
+  transition: all 300ms;
+}
+
+.contact-button:hover::before {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.contact-button::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  translate: -100% -50%;
+  color: white;
+  background-color: #555f62;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms;
+}
+
+.contact-button:hover {
+  background: #3295ce;
+}
+
+.contact-button:hover svg {
+  fill: #fff;
+}
+
+.contact-button svg {
+  fill: #555f62;
+  width: 32px;
+  height: 32px;
+}
+
+.contact-mail::before {
+  content: "მოგვწერეთ";
+}
+
+.contact-call::before {
+  content: "ქოლ ცენტრი";
+}
+
+.contact-location::before {
+  content: "მისამართი";
+}
+
+/*********************/
+/*********************/
+/*  CONTACT SIDEBAR  */
+/*********************/
+/*********************/
+
+.contactSidebar.show {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.contactSidebar {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: all 400ms;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1501;
+  width: 350px;
+  padding: 40px 70px;
+}
+
+.contactSidebar hr {
+  border: none;
+  height: 1px;
+  background-color: #0000003e;
+  margin: 30px 0;
+}
+
+.contactSidebar h3 {
+  font-size: 24px;
+}
+
+.contactInput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+
+.sendContact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 38px;
+}
+
+.sendContact svg {
+  width: 20px;
+  height: 20px;
+}
+
+.backgroundShadow {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background-color: #0000006b;
+  z-index: 1500;
+}
+
+.backgroundShadow.hidden {
+  display: none;
+}
+
+.closeContactWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonClose {
+  background: #eef1f1;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buttonClose:hover {
+  background: #d5d5d5;
+}
+
+.buttonClose svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1000px) {
+  .contactSidebar {
+    width: 70%;
+  }
+}
